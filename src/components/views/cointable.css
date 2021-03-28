@@ -1,0 +1,26 @@
+#coinTable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #coinTable td,
+  #coinTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #coinTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #coinTable tr:hover {
+    background-color: #ddd;
+  }
+  
+  #coinTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #6c3697;
+    color: white;
+  }
