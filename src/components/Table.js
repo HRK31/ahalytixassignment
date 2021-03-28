@@ -1,5 +1,7 @@
 import { Component } from "react";
 import TableRow from "./TableRow";
+import "./views/cointable.css";
+
 
 
 class Table extends Component {
@@ -9,7 +11,7 @@ class Table extends Component {
         this.state = {
             error: null,
             isLoaded: false,
-            data: []
+            data: [],
         };
     }
 
@@ -39,7 +41,7 @@ class Table extends Component {
 
     render() {
         const { error, isLoaded, data } = this.state;
-        this.state.data.splice(11, this.state.data.length);
+        this.state.data.splice(20, this.state.data.length);
         console.log(this.state.data);
         if (error) {
             return <div>Error: {error.message}</div>;
@@ -48,18 +50,21 @@ class Table extends Component {
         } else {
             return (
                 <div>
-                    <h1>Coin Details</h1>
-                    <table>
+                    <h1>CryptoCurrency Details</h1>
+                    <table id="coinTable">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>S.No.</th>
                                 <th>Name</th>
                                 <th>Symbol</th>
+                                <th>Details</th>
                             </tr>
                         </thead>
-                        {data.map((item) => (
-                            <TableRow item={item}></TableRow>
-                        ))}
+                        {data.map(
+                            (item, index) => (
+                                <TableRow item={item} sno={index + 1}></TableRow>
+                            )
+                        )}
                     </table>
                 </div>
             );
