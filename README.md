@@ -1,3 +1,6 @@
+# About Project
+In this project details of CryptoCurrencies are obtained through an API and displayed in the frontend.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
